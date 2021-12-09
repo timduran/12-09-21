@@ -14,14 +14,14 @@ app.get('/contact', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'example', 'index.html'))
 // })
 
-// const dog = {
-//   name: 'Beef',
-//   age: 2,
-//   breed: 'Chihuahua'
-// }
+const dog = {
+  name: 'Beef',
+  age: 2,
+  breed: 'Chihuahua'
+}
 
-// app.get('/dog', (req, res) => {
-//   res.json(dog)
-// })
+app.get('/dog', (req, res) => {
+  res.json(dog)
+})
 
 app.listen(3000)
