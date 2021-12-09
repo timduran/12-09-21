@@ -4,13 +4,13 @@ const path = require('path')
 const app = express()
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'example', 'index.html'))
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 app.get('/movies', (req, res) => {
-  res.sendFile(path.join(__dirname, 'example', 'movies.html'))
+  res.sendFile(path.join(__dirname, 'public', 'movies.html'))
 })
 app.get('/songs', (req, res) => {
-  res.sendFile(path.join(__dirname, 'example', 'songs.html'))
+  res.sendFile(path.join(__dirname, 'public', 'songs.html'))
 })
 
 const dog = {
@@ -21,6 +21,12 @@ const dog = {
 
 app.get(`/dog`, (req, res) => {
   res.json(dog)
+})
+
+app.use(express.static(path.join(__dirname, 'public')))
+
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'contact.html'))
 })
 
 app.listen(3001)
