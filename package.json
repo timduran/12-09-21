@@ -20,5 +20,11 @@
   "homepage": "https://github.com/QFults/12-09-21#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
